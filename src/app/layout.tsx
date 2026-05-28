@@ -29,7 +29,7 @@ const dharris = localFont({
   variable: "--font-dharris",
 });
 const tanpearl = localFont({
-  src: "./font/Tan-Pearl.otf",
+  src: "./font/TAN-Pearl.otf",
   variable: "--font-tanpearl",
 });
 
