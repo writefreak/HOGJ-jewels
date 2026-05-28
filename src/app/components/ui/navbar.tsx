@@ -106,18 +106,9 @@ export default function Navbar() {
           </Link>
         ))}
 
-        <a
-          href="#tool"
-          onClick={() => setMenuOpen(false)}
-          className="text-base font-medium bg-[#76492E] text-white px-8 py-3 rounded-lg text-center"
-          style={{
-            opacity: menuOpen ? 1 : 0,
-            transform: menuOpen ? "translateX(0)" : "translateX(-24px)",
-            transition: `opacity 0.35s ease ${NAV_LINKS.length * 0.07}s, transform 0.35s ease ${NAV_LINKS.length * 0.07}s`,
-          }}
-        >
-          Start extracting
-        </a>
+        <button className="hidden md:block hover:scale-105 hover:bg-[#76492E] active:scale-95 transition-all duration-150 text-[15px] md:px-6 px-4 py-2 rounded-3xl bg-[#76492E] text-white font-medium">
+          Contact Us
+        </button>
       </div>
     </>
   );
