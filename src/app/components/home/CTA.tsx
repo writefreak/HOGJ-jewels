@@ -24,7 +24,7 @@ const Category = () => {
   };
 
   return (
-    <section className=" pb-8">
+    <section className=" pb-18">
       <Wrapper>
         <div className="flex flex-col gap-16">
           {/* Left */}

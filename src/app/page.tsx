@@ -21,7 +21,7 @@ const page = () => {
         <ExploreCat />
         <Reviews />
         <CTA />
-        {/* <Footer /> */}
+        <Footer />
       </div>
     </div>
   );
