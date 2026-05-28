@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Nunito, Playfair_Display } from "next/font/google";
 import "./globals.css";
+import localFont from "next/font/local";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -23,6 +24,15 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const dharris = localFont({
+  src: "./font/Dharris.otf",
+  variable: "--font-dharris",
+});
+const tanpearl = localFont({
+  src: "./font/Tan-Pearl.otf",
+  variable: "--font-tanpearl",
+});
+
 export const metadata: Metadata = {
   title: "Heart Of Gold Jewels",
   description: "Luxury You Can Treasure Forever",
@@ -36,7 +46,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${playfair.variable} ${nunito.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${tanpearl.variable} ${dharris.variable} ${playfair.variable} ${nunito.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col font-nunito">{children}</body>
     </html>

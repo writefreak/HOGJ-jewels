@@ -1,18 +1,18 @@
 "use client";
 import React, { useRef } from "react";
-import { Wrapper } from "./ui/wrapper";
+import { Wrapper } from "../ui/wrapper";
 import { ChevronLeft, ChevronRight, ArrowUpRight } from "lucide-react";
 
 const pieces = [
-  { name: "Golden Reverie Necklace", price: "₦45,000", tag: "Bestseller" },
+  { name: "Golden Necklace", price: "₦45,000", tag: "Bestseller" },
   { name: "Pearl Drop Earrings", price: "₦28,000", tag: "New Arrival" },
   { name: "Celestial Bangle Set", price: "₦62,000", tag: "Limited" },
-  { name: "Vintage Charm Bracelet", price: "₦33,500", tag: "Trending" },
-  { name: "Vintage Charm Bracelet", price: "₦33,500", tag: "Trending" },
-  { name: "Vintage Charm Bracelet", price: "₦33,500", tag: "Trending" },
-  { name: "Vintage Charm Bracelet", price: "₦33,500", tag: "Trending" },
-  { name: "Vintage Charm Bracelet", price: "₦33,500", tag: "Trending" },
-  { name: "Vintage Charm Bracelet", price: "₦33,500", tag: "Trending" },
+  { name: "Charm Bracelet", price: "₦33,500", tag: "Trending" },
+  { name: "Charm Bracelet", price: "₦33,500", tag: "Trending" },
+  { name: "Charm Bracelet", price: "₦33,500", tag: "Trending" },
+  { name: "Charm Bracelet", price: "₦33,500", tag: "Trending" },
+  { name: "Charm Bracelet", price: "₦33,500", tag: "Trending" },
+  { name: "Charm Bracelet", price: "₦33,500", tag: "Trending" },
 ];
 
 const Featured = () => {
@@ -27,10 +27,10 @@ const Featured = () => {
   };
 
   return (
-    <section className="pt-20 md:pt-20 bg-white">
+    <section className="pt-20 md:pt-20">
       <Wrapper>
         <div className="pb-3 md:pb-5 flex flex-col gap-2">
-          <h2 className="font-playfair font-semibold flex text-2xl md:text-4xl text-[#76492E]">
+          <h2 className="font-tanpearl pb-4 font-semibold flex text-xl md:text-2xl text-[#76492E]">
             Featured Pieces
           </h2>
         </div>
@@ -69,7 +69,7 @@ const Featured = () => {
                 <div className="absolute bottom-0 left-0 right-0 p-4 md:p-5">
                   <div className="flex items-end justify-between">
                     <div>
-                      <h3 className="font-playfair text-base md:text-lg font-semibold text-white mb-0.5 leading-snug">
+                      <h3 className="font-tanpearl text-sm font-semibold text-white mb-0.5 leading-snug">
                         {piece.name}
                       </h3>
                       <span className="font-nunito text-[12px] text-white/70">
@@ -89,13 +89,13 @@ const Featured = () => {
         <div className="flex gap-2 justify-end mt-4">
           <button
             onClick={() => scroll("left")}
-            className="w-10 h-10 rounded-full border border-[#76492E] text-[#76492E] hover:bg-[#76492E] hover:text-white flex items-center justify-center transition-all duration-200"
+            className="w-8 h-8 rounded-full border bg-[#76492E] text-white hover:bg-[#76492E] hover:text-white flex items-center justify-center transition-all duration-200"
           >
             <ChevronLeft size={18} />
           </button>
           <button
             onClick={() => scroll("right")}
-            className="w-10 h-10 rounded-full border border-[#76492E] text-[#76492E] hover:bg-[#76492E] hover:text-white flex items-center justify-center transition-all duration-200"
+            className="w-8 h-8 rounded-full border bg-[#76492E] text-white hover:bg-[#76492E] hover:text-white flex items-center justify-center transition-all duration-200"
           >
             <ChevronRight size={18} />
           </button>

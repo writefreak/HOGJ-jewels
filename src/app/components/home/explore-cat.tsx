@@ -48,38 +48,14 @@ const ExploreCat = () => {
   };
 
   return (
-    <section className="bg-white py-16 md:py-20">
+    <section className="py-16 md:py-20">
       <Wrapper>
         {/* Header */}
-        <div className="flex items-end justify-between pb-6">
+        <div className="flex items-end justify-between pb-3">
           <div>
-            <h2 className="font-playfair text-2xl md:text-3xl font-bold text-[#76492E]">
+            <h2 className="font-tanpearl pb-4 text-xl md:text-2xl font-bold text-[#76492E]">
               Explore By Category
             </h2>
-          </div>
-
-          {/* Desktop: view all / Mobile: arrow controls */}
-          <div className="flex items-center gap-2">
-            <div className="flex items-center gap-2 md:hidden">
-              <button
-                onClick={() => scroll("left")}
-                className="w-8 h-8 rounded-full border border-[#76492E]/30 flex items-center justify-center text-[#76492E] hover:bg-[#76492E]/5 transition-colors"
-              >
-                <ChevronLeft size={16} />
-              </button>
-              <button
-                onClick={() => scroll("right")}
-                className="w-8 h-8 rounded-full border border-[#76492E]/30 flex items-center justify-center text-[#76492E] hover:bg-[#76492E]/5 transition-colors"
-              >
-                <ChevronRight size={16} />
-              </button>
-            </div>
-            <Link
-              href="/shop"
-              className="hidden md:flex items-center gap-1.5 font-nunito text-sm text-[#76492E] hover:opacity-70 transition-opacity"
-            >
-              View all <ArrowUpRight size={15} />
-            </Link>
           </div>
         </div>
 
@@ -106,13 +82,30 @@ const ExploreCat = () => {
                 <div className="absolute inset-0 bg-linear-to-t from-black/75 via-black/20 to-transparent" />
                 <div className="absolute top-4 left-4"></div>
                 <div className="absolute bottom-0 left-0 right-0 p-4">
-                  <h3 className="font-playfair text-lg font-semibold text-white mb-1">
+                  <h3 className="font-tanpearl text-sm font-semibold text-white mb-1">
                     {c.title}
                   </h3>
                 </div>
               </div>
             </Link>
           ))}
+        </div>
+
+        <div className="flex items-center gap-2 justify-end pt-5">
+          <div className="flex items-center gap-2 md:hidden">
+            <button
+              onClick={() => scroll("left")}
+              className="w-8 h-8 rounded-full border bg-[#76492E] flex items-center justify-center text-white hover:bg-[#76492E]/5 transition-colors"
+            >
+              <ChevronLeft size={16} />
+            </button>
+            <button
+              onClick={() => scroll("right")}
+              className="w-8 h-8 rounded-full border bg-[#76492E] flex items-center justify-center text-white hover:bg-[#76492E]/5 transition-colors"
+            >
+              <ChevronRight size={16} />
+            </button>
+          </div>
         </div>
 
         {/* Desktop: grid */}
@@ -133,7 +126,7 @@ const ExploreCat = () => {
                 <div className="absolute bottom-0 left-0 right-0 p-5">
                   <div className="flex items-end justify-between">
                     <div>
-                      <h3 className="font-playfair text-xl font-semibold text-white mb-1">
+                      <h3 className="font-tanpearl text-sm font-semibold text-white mb-1">
                         {c.title}
                       </h3>
                       <p className="font-nunito text-[11px] text-white/70 leading-relaxed line-clamp-2 max-w-40">
@@ -148,16 +141,6 @@ const ExploreCat = () => {
               </div>
             </Link>
           ))}
-        </div>
-
-        {/* Mobile: view all */}
-        <div className="md:hidden flex justify-center mt-8">
-          <Link
-            href="/shop"
-            className="flex items-center gap-1.5 font-nunito text-sm text-[#76492E] border border-[#76492E]/30 rounded-full px-6 py-2.5 hover:bg-[#76492E]/5 transition-colors"
-          >
-            View all categories <ArrowUpRight size={14} />
-          </Link>
         </div>
       </Wrapper>
     </section>
